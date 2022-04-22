@@ -9,8 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/react": "^18.0.5",
-    "@types/react-dom": "^18.0.1",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
@@ -25,6 +23,8 @@
     "webpack-dev-server": "^4.8.1"
   },
   "devDependencies": {
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.1",
     "clean-webpack-plugin": "^4.0.0"
   }
 }
