@@ -19,6 +19,10 @@ export default function AppRouter() {
                     <Route path='manufactrues' element={<ManufactruesPage />} />
                     <Route path='contact' element={<ContactPage />} />
                 </Route>
+
+                <Route path="*" element={<div>404 no found</div>}></Route>
+
+                
             </Routes>
 
         </BrowserRouter>
