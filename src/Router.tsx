@@ -22,7 +22,6 @@ export default function AppRouter() {
 
                 <Route path="*" element={<div>404 no found</div>}></Route>
 
-                
             </Routes>
 
         </BrowserRouter>
