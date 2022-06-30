@@ -6,7 +6,7 @@ export default function IndexPage() {
         <div style={index}>
             <div style={index_banner}></div>
             {/* <div style={{ textAlign: 'center' }}> */}
-            <img src={bannerImg} style={{}}/>
+            <img src={bannerImg} style={{width:'100%'}}/>
             <div>
                 <div style={index_txt}>THE POPULAR PRODUCTS</div>
                 {/* </div> */}

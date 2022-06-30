@@ -21,7 +21,7 @@ export default function HeadComponent() {
             </div>
 
             <div>
-                <img src={headbg} style={{ height: "155px", width: "789px" }} />
+                {/* <img src={headbg} style={{ height: "155px", width: "789px" }} /> */}
             </div>
         </div>
     )
