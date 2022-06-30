@@ -6,6 +6,7 @@ import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import ManufactruesPage from './Pages/ManufactruesPage';
 import CommonLayout from './Pages/CommonLayout';
+import SearchPage from './Pages/SearchPage';
 
 
 export default function AppRouter() {
@@ -16,7 +17,7 @@ export default function AppRouter() {
                 <Route path="/" element={<CommonLayout />}>
                     <Route index element={<IndexPage />} />
                     <Route path="about" element={<AboutPage />} />
-                    <Route path="manufactrues" element={<ManufactruesPage />} />
+                    <Route path="search" element={<SearchPage />} />
                     <Route path="contact" element={<ContactPage />} />
                 </Route>
 

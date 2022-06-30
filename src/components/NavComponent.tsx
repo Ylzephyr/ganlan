@@ -54,7 +54,8 @@ export default function NavComponent() {
                 </li>
 
                 <li style={{ float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px", position: "relative"}} onMouseMove={handleMouseLiMove}>
-                    <Link to="/manufactrues" style={{ textDecoration: 'none', color: "white"}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactrues</Link>
+                    {/* <Link to="/manufactrues" style={{ textDecoration: 'none', color: "white"}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactrues</Link> */}
+                    <div style={{ textDecoration: 'none', color: "white"}} onMouseMove={handleMouseManuMove}>Manufactrues</div>
                     <div style={{ display: showManu == true ? 'block' : 'none', position: 'absolute', backgroundColor: 'rgb(255,255,255)', color: '#666666' ,width:'200px'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>
                         {/* <div style={{display:"inline-block"}}>Manufactrues </div> */}
                         <div>Texas Instruments</div>
