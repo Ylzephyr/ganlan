@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 export default function NavComponent() {
 
     const [showManu, setShowManu] = React.useState(false);
+    const [showLight,setShowLight] = React.useState(0);
 
-    const [showLi, setShowLi] = React.useState([{
+    const showLi = [{
         name: "Home",
         to: '/',
         index: 0,
@@ -25,10 +26,29 @@ export default function NavComponent() {
         to: '/contact',
         index: 3,
         isshow: false
-    }])
+    }]
+    // const liItems = showLi.map((item, index) => {
+    //     return (
+    //     <li style={{ float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px" }} onMouseMove={handleMouseLiMove}>
+           
+    //         {item.index==1? 
+    //                     <div>
+    //                     <div style={{ textDecoration: 'none', color: "white"}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactrues</div>
+    //                     <div style={{ display: showManu == true ? 'block' : 'none', position: 'absolute', backgroundColor: 'rgb(255,255,255)', color: '#666666' ,width:'200px'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>
+    //                         <div>Texas Instruments</div>
+    //                         <div>Analog Devices</div>
+    //                         <div>Microchip</div>
+    //                         <div>Infineon Techon</div>
+    //                         <div>NXP</div>
+    //                     </div>
+    //                     </div>:
+    //                     <Link to={item.to} style={{ textDecoration: 'none', color: "white" }}>{item.name}</Link>
+    //         }
+    //     </li>
+    //     )
+    // })
 
     const handleMouseLiMove =(event: React.MouseEvent)=>{
-
     }
 
     const handleMouseManuMove = (event: React.MouseEvent) => {
@@ -39,6 +59,7 @@ export default function NavComponent() {
     }
     React.useEffect(() => {
         setShowManu(false);
+        setShowLight(0)
     }, [])
 
     return (
@@ -47,15 +68,15 @@ export default function NavComponent() {
             height: "50px",
             paddingLeft: "150px"
         }}>
-            <ul style={{ padding: "0", margin: "0" }}>
+            <ul style={{ padding: "0", margin: "0" }} onMouseLeave={()=>setShowLight(0)}>
 
-                <li style={{ float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px" }} onMouseMove={handleMouseLiMove}>
-                    <Link to="/" style={{ textDecoration: 'none', color: "white" }}>Home</Link>
+                <li style={{ backgroundColor :showLight==1?'rgb(255,255,255)':'',float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px"}} onMouseMove={()=>setShowLight(1)}>
+                    <Link to="/" style={{ textDecoration: 'none', color: showLight==1?'#666666':'white'}}>Home</Link>
                 </li>
 
-                <li style={{ float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px", position: "relative"}} onMouseMove={handleMouseLiMove}>
-                    {/* <Link to="/manufactrues" style={{ textDecoration: 'none', color: "white"}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactrues</Link> */}
-                    <div style={{ textDecoration: 'none', color: "white"}} onMouseMove={handleMouseManuMove}>Manufactrues</div>
+                <li style={{backgroundColor :showLight==2?'rgb(255,255,255)':'', float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px", position: "relative"}} onMouseMove={()=>setShowLight(2)}>
+                    
+                    <div style={{ textDecoration: 'none', color: showLight==2?'#666666':'white'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactrues</div>
                     <div style={{ display: showManu == true ? 'block' : 'none', position: 'absolute', backgroundColor: 'rgb(255,255,255)', color: '#666666' ,width:'200px'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>
                         {/* <div style={{display:"inline-block"}}>Manufactrues </div> */}
                         <div>Texas Instruments</div>
@@ -66,15 +87,15 @@ export default function NavComponent() {
                     </div>
                 </li>
 
-                <li style={{ float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px" }} onMouseMove={handleMouseLiMove}>
-                    <Link to="/about" style={{ textDecoration: 'none', color: "white" }}>About us</Link>
+                <li style={{backgroundColor :showLight==3?'rgb(255,255,255)':'', float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px" }} onMouseMove={()=>setShowLight(3)}>
+                    <Link to="/about" style={{ textDecoration: 'none', color: showLight==3?'#666666':'white' }}>About us</Link>
                 </li>
 
-                <li style={{ float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px" }} onMouseMove={handleMouseLiMove}>
-                    <Link to="/contact" style={{ textDecoration: 'none', color: "white" }}>Contact</Link>
+                <li style={{backgroundColor :showLight==4?'rgb(255,255,255)':'', float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px"}} onMouseMove={()=>setShowLight(4)}>
+                    <Link to="/contact" style={{ textDecoration: 'none', color: showLight==4?'#666666':'white' }}>Contact</Link>
                 </li>
 
-                {/* {liItem} */}
+                {/* { liItems }  */}
 
             </ul>
         </div>
