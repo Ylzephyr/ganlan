@@ -12,7 +12,7 @@ export default function NavComponent() {
         index: 0,
         isshow: false
     }, {
-        name: "Manufactrues",
+        name: "Manufactures",
         to: '/manufactrues',
         index: 1,
         isshow: false
@@ -33,7 +33,7 @@ export default function NavComponent() {
            
     //         {item.index==1? 
     //                     <div>
-    //                     <div style={{ textDecoration: 'none', color: "white"}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactrues</div>
+    //                     <div style={{ textDecoration: 'none', color: "white"}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactures</div>
     //                     <div style={{ display: showManu == true ? 'block' : 'none', position: 'absolute', backgroundColor: 'rgb(255,255,255)', color: '#666666' ,width:'200px'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>
     //                         <div>Texas Instruments</div>
     //                         <div>Analog Devices</div>
@@ -76,14 +76,24 @@ export default function NavComponent() {
 
                 <li style={{backgroundColor :showLight==2?'rgb(255,255,255)':'', float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px", position: "relative"}} onMouseMove={()=>setShowLight(2)}>
                     
-                    <div style={{ textDecoration: 'none', color: showLight==2?'#666666':'white'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactrues</div>
+                    <div style={{ textDecoration: 'none', color: showLight==2?'#666666':'white'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactures</div>
                     <div style={{ display: showManu == true ? 'block' : 'none', position: 'absolute', backgroundColor: 'rgb(255,255,255)', color: '#666666' ,width:'200px'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>
-                        {/* <div style={{display:"inline-block"}}>Manufactrues </div> */}
-                        <div>Texas Instruments</div>
-                        <div>Analog Devices</div>
-                        <div>Microchip</div>
-                        <div>Infineon Techon</div>
-                        <div>NXP</div>
+                        {/* <div style={{display:"inline-block"}}>Manufactures </div> */}
+                        <div>
+                            <Link to={{pathname:"/search",search:'?manufacture=Ti'}} style={{ textDecoration: 'none'}}>Texas Instruments</Link>
+                        </div>
+                        <div>
+                            <Link to={{pathname:"/search",search:'?manufacture=AD'}} style={{ textDecoration: 'none'}}>Analog Devices</Link>
+                        </div>
+                        <div>
+                            <Link to={{pathname:"/search",search:'?manufacture=Microchip'}} style={{ textDecoration: 'none'}}>Microchip</Link>
+                        </div>
+                        <div>
+                            <Link to={{pathname:"/search",search:'?manufacture=Infineon'}} style={{ textDecoration: 'none'}}>Infineon Techon</Link>
+                        </div>
+                        <div>
+                            <Link to={{pathname:"/search",search:'?manufacture=NXP'}} style={{ textDecoration: 'none'}}>NXP</Link>
+                        </div>
                     </div>
                 </li>
 
