@@ -2,6 +2,7 @@
   "name": "ganlan",
   "version": "1.0.0",
   "description": "",
+  "proxy":"http://localhost:9001",
   "scripts": {
     "build:dev": "webpack --config ./build/webpack.dev.js",
     "start:dev": "webpack-dev-server --config ./build/webpack.dev.js"
@@ -9,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
