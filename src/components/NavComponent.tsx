@@ -76,23 +76,23 @@ export default function NavComponent() {
 
                 <li style={{backgroundColor :showLight==2?'rgb(255,255,255)':'', float: "left", listStyle: "none", lineHeight: "50px", textAlign: "center", width: "200px", position: "relative"}} onMouseMove={()=>setShowLight(2)}>
                     
-                    <div style={{ textDecoration: 'none', color: showLight==2?'#666666':'white'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactures</div>
+                    <div style={{ textDecoration: 'none', color: showLight==2?'#666666':'white',cursor:"pointer"}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>Manufactures</div>
                     <div style={{ display: showManu == true ? 'block' : 'none', position: 'absolute', backgroundColor: 'rgb(255,255,255)', color: '#666666' ,width:'200px'}} onMouseMove={handleMouseManuMove} onMouseLeave={handleMouseLeave}>
                         {/* <div style={{display:"inline-block"}}>Manufactures </div> */}
                         <div>
-                            <Link to={{pathname:"/search",search:'?manufacture=Ti'}} style={{ textDecoration: 'none'}}>Texas Instruments</Link>
+                            <Link to={{pathname:"/search",search:'?manufacture=Ti&part_number=&page=1'}} style={{ textDecoration: 'none'}}>Texas Instruments</Link>
                         </div>
                         <div>
-                            <Link to={{pathname:"/search",search:'?manufacture=AD'}} style={{ textDecoration: 'none'}}>Analog Devices</Link>
+                            <Link to={{pathname:"/search",search:'?manufacture=AD&part_number=&page=1'}} style={{ textDecoration: 'none'}}>Analog Devices</Link>
                         </div>
                         <div>
-                            <Link to={{pathname:"/search",search:'?manufacture=Microchip'}} style={{ textDecoration: 'none'}}>Microchip</Link>
+                            <Link to={{pathname:"/search",search:'?manufacture=Microchip&part_number=&page=1'}} style={{ textDecoration: 'none'}}>Microchip</Link>
                         </div>
                         <div>
-                            <Link to={{pathname:"/search",search:'?manufacture=Infineon'}} style={{ textDecoration: 'none'}}>Infineon Techon</Link>
+                            <Link to={{pathname:"/search",search:'?manufacture=Infineon&part_number=&page=1'}} style={{ textDecoration: 'none'}}>Infineon Techon</Link>
                         </div>
                         <div>
-                            <Link to={{pathname:"/search",search:'?manufacture=NXP'}} style={{ textDecoration: 'none'}}>NXP</Link>
+                            <Link to={{pathname:"/search",search:'?manufacture=NXP&part_number=&page=1'}} style={{ textDecoration: 'none'}}>NXP</Link>
                         </div>
                     </div>
                 </li>

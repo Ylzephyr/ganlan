@@ -14,7 +14,7 @@ export default function HeadComponent() {
     const linkSearch = (event: React.KeyboardEvent) => {
         if (event.key === "Enter") {
             // 跳转
-            navigate("/search?part_number=" + inputValue)
+            navigate(`/search?manufacture=&part_number=${inputValue}&page=1`)
             setInputValue("")
         }
     }

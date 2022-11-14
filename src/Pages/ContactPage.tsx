@@ -50,7 +50,7 @@ const contact_box_input = {
 const contact_box_txtarea = {
     'marginTop': '10px',
     'marginBottom': '50px',
-    'width': '800px',
+    'width': '700px',
     'height': '100px'
 }
 
